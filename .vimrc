@@ -1,10 +1,11 @@
-"syntax
+"common
 :filetype plugin on
 :syntax on
 :set number
 :set tabstop=4
 :set shiftwidth=4
 :set noswapfile
+:set relativenumber
 
 "other
 :set mouse=a
@@ -20,6 +21,8 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'vim-airline/vim-airline'
 Plug 'Badacadabra/vim-archery'
 "Plug 'nordtheme/vim'
+"Plug 'jamespwilliams/bat.vim'
+"Plug 'lyokha/vim-xkbswitch'
 
 call plug#end()
 
@@ -42,7 +45,15 @@ inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 "themes
 colorscheme archery
 :let g:colors_name='archery'
+"set termguicolors
+"colorscheme bat
 :set noshowmode
 :set showtabline=2
 :set laststatus=2
 
+"ru
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+let g:XkbSwitchEnabled = 1
+let g:XkbSwitchIMappings = ['ru']
